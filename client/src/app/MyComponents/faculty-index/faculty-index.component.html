@@ -1,0 +1,22 @@
+<div class="wrapper row5">
+  <div id="container" class="clear">
+    <div id="homepage" class="clear">
+        <table *ngFor="let list of users" [routerLink]="['/profile-show',list._id]">
+            <div id="tablebox">
+                <tr>
+                  <td>
+                    <img
+                      src="{{list.img}}"
+                      alt="s"/>
+                  </td>
+                  <td>
+                    <a>{{ list.name }}</a>
+                    <hr />
+                    <div class="role"><p>{{ list.role }}</p></div>
+                  </td>
+                </tr>
+              </div>
+        </table>
+    </div>
+  </div>
+</div>

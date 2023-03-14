@@ -1,0 +1,64 @@
+<html>
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+  />
+
+  <div class="centered-content">
+    <div class="task-manager-container">
+      <div class="sidebar">
+        <h1 class="title has-text-primary">Content</h1>
+
+        <div class="list-menu">
+          <a
+            class="list-menu-item"
+            *ngFor="let list of lists"
+            [routerLink]="['/profile', list._id]"
+            routerLinkActive="is-active"
+          >
+            <p>{{ list.title }}</p>
+          </a>
+        </div>
+      </div>
+
+      <div class="task-list-container has-background-light">
+        <div *ngIf="tasks">
+          <div class="top-bar">
+            <h1 class="title has-text-primary"></h1>
+          </div>
+
+          <!-- Task Elements -->
+          <div class="task" *ngFor="let task of tasks">
+            <div class="task-text">
+              <p>{{ task.title }}</p>
+            </div>
+            <div class="task-buttons">
+            </div>
+          </div>
+
+          <h3 class="empty-state-text" *ngIf="tasks.length === 0">
+            There is not content to be displayed
+          </h3>
+
+          <button
+            routerLink="./new-task"
+            class="circle-add-button button is-primary"
+          >
+            <h2>+</h2>
+          </button>
+        </div>
+
+        <div *ngIf="!tasks">
+          <h3 class="empty-state-text">
+            Please select a list from the sidebar
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="logOut button is-danger">
+  </div>
+</html>

@@ -1,0 +1,24 @@
+<html>
+  <div class="login-box">
+    <div class="modal-box">
+      <h1 class="title">Add new content</h1>
+
+      <input
+        #listTitleInput
+        class="user-box"
+        type="text"
+        placeholder="Enter list name..."
+      />
+      <br /><br />
+      <div class="buttons is-right">
+        <button class="btn btn-centre" routerLink="/profile">Cancel</button>
+        <button
+          class="btn btn-centre"
+          (click)="createList(listTitleInput.value)"
+        >
+          Create
+        </button>
+      </div>
+    </div>
+  </div>
+</html>

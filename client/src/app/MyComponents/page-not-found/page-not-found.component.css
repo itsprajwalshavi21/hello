@@ -1,0 +1,32 @@
+.card-intro .card-body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 0 !important;
+}
+
+.card-intro .card-body h1 {
+  margin-bottom: 0;
+}
+
+.card-intro {
+  margin-top: 64px;
+}
+
+@media (max-width: 992px) {
+  .card-intro {
+    margin-top: 54px;
+  }
+}
+
+.mt_4{
+  margin-top: 150px;
+}
+button{
+  border: solid;
+  margin-right: 20px;
+}
+
+button:hover{
+  background-color: #3788db;
+  margin-right: 20px;
+}
